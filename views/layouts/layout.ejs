@@ -6,10 +6,9 @@
     <title>MyBrary</title>
 </head>
 <body>
-    Before
-    <br>
-    <%- body %> //this will replace the requested page from the views folder into this template body
-    <br>
-    After
+    <%- include('../partials/header.ejs') %> <%# this will include the Partials > header.ejs file seen above. %>
+    <%- include('../partials/errorMessage.ejs') %>
+    <%- body %> <%# this will replace the requested page from the views folder into this template body. %>
+    
 </body>
 </html>

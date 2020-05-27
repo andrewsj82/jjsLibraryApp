@@ -1,0 +1,19 @@
+<h2>Search Authors</h2>
+<form action="/authors" method="GET">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= searchOptions.name %>">
+    <button type="submit">Search</button>
+</form>
+<%# this will create the form area of the Authors page. with the header text,
+    a label, text input bar for the author's name, and a search button to submit
+    the query to the database. the GET method must match the Route call used 
+    in the Authors.js routes file.  %>
+<br>
+<% authors.forEach(author => { %>
+    <div><%= author.name %></div>
+<% }) %>
+<%# the less than parentheses symbol dictates a call to the server.
+    we go to the authors table, then run an es6 function. the server replies
+    with the server called name of each author found, and puts them
+    inside their own div. %>
+    
